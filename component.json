@@ -1,0 +1,18 @@
+{
+  "name": "obj-subset",
+  "version": "1.0.0",
+  "description": "Determine if one object is a subset of another object",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "author": "River Grimm <river.grimm@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "component/assert": "0.5.0",
+    "component/stack": "0.0.1",
+    "jkroso/equals": "1.0.0",
+    "jkroso/type": "1.1.0",
+    "yields/fmt": "0.0.2"
+  }
+}

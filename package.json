@@ -1,0 +1,31 @@
+{
+  "name": "obj-subset",
+  "version": "1.0.0",
+  "description": "Determine if one object is a subset of another object",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/staygrimm/obj-subset.git"
+  },
+  "keywords": [
+    "object",
+    "subset",
+    "compare"
+  ],
+  "author": "River Grimm <river.grimm@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/staygrimm/obj-subset/issues"
+  },
+  "homepage": "https://github.com/staygrimm/obj-subset",
+  "devDependencies": {
+    "duo": "^0.9.2",
+    "duo-test": "^0.3.13"
+  }
+}
