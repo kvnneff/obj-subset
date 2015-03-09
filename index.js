@@ -16,7 +16,7 @@ function objSubset (obj, subset) {
     if (!(typeof obj == 'object') || !(typeof subset == 'object')) return false;
     for (var key in subset) {
         if (!(key in obj)) return false;
-        if (subset[key] !== obj[key]) return false;
+        if (subset[key] != obj[key]) return false;
     }
     return true;
 }
