@@ -13,7 +13,7 @@ module.exports = isSubset;
  * @api public
  */
 function isSubset (original, subset, strict) {
-  strict = strict || true;
+  strict = (strict === false) ? false : true;
   if (typeof subset !== 'object' || typeof original !== 'object') return false;
   if (!!subset && !original) return false;
 
@@ -33,6 +33,7 @@ function isSubset (original, subset, strict) {
     if (typeof(originalProp) === 'object'
       && originalProp !== null
       && subsetProp !== null) return isSubset(originalProp, subsetProp);
+    console.log(strict);
     if (strict) return originalProp === subsetProp;
     return originalProp == subsetProp;
   });
