@@ -6,7 +6,10 @@ build: node_modules builddir
 	@$(BIN)/duo --stdout index.js > $(BUILDDIR)/build.js
 	@$(BIN)/duo --stdout $(TESTDIR)/index.js > $(BUILDDIR)/tests.js --development
 
-test: build
+test:node_modules
+	@$(BIN)/mocha test/index.js
+
+test-browser: build
 	@$(BIN)/duo-test \
 		-c 'make build' \
 		--build build/tests.js \
@@ -25,4 +28,4 @@ clean:
 builddir:
 	mkdir -p $(BUILDDIR)
 
-phony: example build tests
+.PHONY: example build test
