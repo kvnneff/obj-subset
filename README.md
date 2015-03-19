@@ -1,4 +1,4 @@
-# obj-subset
+# obj-subset ![travis-ci](https://travis-ci.org/staygrimm/obj-subset.svg?branch=master)
 
 Determine if one object is a subset of another object in node and the browser.  Also works on arrays.
 
