@@ -1,6 +1,8 @@
 # obj-subset
 
-Determine if one object is a subset of another object.
+Determine if one object is a subset of another object in node and the browser.  Also works on arrays.
+
+A large portion of this code was lifted from [chai-subset](https://github.com/e-conomic/chai-subset).
 
 ## Installation
 
@@ -14,9 +16,11 @@ component:
 
 ## API
 
-### subset(object, subsetObject)
+### isSubset(original, subset, [strict])
 
-Returns `true` if `object` contains all of the properties and values of `subsetObject`, otherwise returns `false`.
+Returns `true` if `original` contains all of the properties and values of
+`subset`, otherwise returns `false`.  `strict` is set to `true` by default.
+Setting to `false` will allow lenient equality comparisons (== vs ===);
 
 ## Usage
 
