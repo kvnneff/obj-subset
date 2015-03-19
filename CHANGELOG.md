@@ -12,5 +12,5 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.0.0] - 2015-01-30
 - Initial release
 
-[1.1.0]: https://github.com/olivierlacan/keep-a-changelog/compare/1.1.0...HEAD
-[1.0.0]: https://github.com/olivierlacan/keep-a-changelog/compare/1.1.0...v1.1.0
+[1.1.0]: https://github.com/staygrimm/obj-subset/compare/1.1.0...HEAD
+[1.0.0]: https://github.com/staygrimm/obj-subset/compare/1.1.0...v1.1.0
