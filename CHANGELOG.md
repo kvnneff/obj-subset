@@ -9,8 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Ability to choose to use either strict or lenient equality comparisons
 
-## [1.1.0] - 2015-01-30
+## [1.0.0] - 2015-01-30
 - Initial release
 
-[0.0.3]: https://github.com/olivierlacan/keep-a-changelog/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/olivierlacan/keep-a-changelog/compare/1.1.0...HEAD
 [1.0.0]: https://github.com/olivierlacan/keep-a-changelog/compare/1.1.0...v1.1.0
