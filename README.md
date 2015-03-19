@@ -13,6 +13,10 @@ npm:
 component:
 
     $ component install staygrimm/obj-subset
+    
+## Example
+
+Clone this repo and type `make example`
 
 ## API
 
