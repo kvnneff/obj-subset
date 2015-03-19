@@ -1,22 +1,39 @@
 'use strict';
 
 /**
- * Export `objSubset`
+ * Export `isSubset`
  */
-module.exports = objSubset;
+module.exports = isSubset;
 
 /**
- * Determine if `subset` is a subset of `obj`
- * @param  {Object} obj
- * @param  {Object} subset
+ * Determine if `subset` is a subset of `original`
+ * @param  {Object} original  The original object
+ * @param  {Object} subset  The subset
  * @return {Boolean}
  * @api public
  */
-function objSubset (obj, subset) {
-    if (!(typeof obj == 'object') || !(typeof subset == 'object')) return false;
-    for (var key in subset) {
-        if (!(key in obj)) return false;
-        if (subset[key] !== obj[key]) return false;
-    }
-    return true;
+function isSubset (original, subset, strict) {
+  strict = strict || true;
+  if (typeof subset !== 'object' || typeof original !== 'object') return false;
+  if (!!subset && !original) return false;
+
+  if (Array.isArray(subset)) {
+    if (typeof(original.length) !== 'number') return false;
+    var originalArray = Array.prototype.slice.call(original);
+    return subset.every(function (subsetItem) {
+      return originalArray.some(function (originalItem) {
+        return isSubset(subsetItem, originalItem)
+      });
+    });
+  }
+
+  return Object.keys(subset).every(function (key) {
+    var originalProp = subset[key];
+    var subsetProp = original[key];
+    if (typeof(originalProp) === 'object'
+      && originalProp !== null
+      && subsetProp !== null) return isSubset(originalProp, subsetProp);
+    if (strict) return originalProp === subsetProp;
+    return originalProp == subsetProp;
+  });
 }
