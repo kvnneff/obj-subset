@@ -16,10 +16,13 @@ test: build
 node_modules:
 	npm install
 
+example:
+	@node examples/
+
 clean:
 	rm -rf ./node_modules ./build ./components
 
 builddir:
 	mkdir -p $(BUILDDIR)
 
-phony: build build-test tests
+phony: example build tests
