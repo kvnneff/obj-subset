@@ -32,7 +32,7 @@ function isSubset (original, subset, strict) {
     var subsetProp = original[key];
     if (typeof(originalProp) === 'object'
       && originalProp !== null
-      && subsetProp !== null) return isSubset(originalProp, subsetProp);
+      && subsetProp !== null) return isSubset(originalProp, subsetProp, strict);
     if (strict) return originalProp === subsetProp;
     return originalProp == subsetProp;
   });
