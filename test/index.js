@@ -14,6 +14,11 @@ describe('subset(original, subset)', function () {
     subset = {bas: { baz: 'c'}};
     assert(isSubset(original, subset) === true);
   });
+  it('returns true if `subset` is a subset of `original` even for parts of nested objects', function () {
+    original = {foo: 'a', bar: 'b', bas: { baz: 'c', bax: 'd'}};
+    subset = {bas: { baz: 'c'}};
+    assert(isSubset(original, subset) === true);
+  });
   it('returns false if `subset` is not a subset of `original`', function () {
     original = {foo: 'a', bar: 'b'};
     subset = {foo: 'b'};
@@ -21,6 +26,11 @@ describe('subset(original, subset)', function () {
   });
   it('returns false if `subset` is not a subset of `original` even for nested objects', function () {
     original = {foo: 'a', bar: 'b', bas: { baz: 'c'}};
+    subset = {bax: { baz: 'c'}};
+    assert(isSubset(original, subset) === false);
+  });
+  it('returns true if `subset` is a subset of `original` even for parts of nested objects', function () {
+    original = {foo: 'a', bar: 'b', bas: { baz: 'c', bax: 'd'}};
     subset = {bax: { baz: 'c'}};
     assert(isSubset(original, subset) === false);
   });
