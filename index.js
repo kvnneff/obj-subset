@@ -28,11 +28,11 @@ function isSubset (original, subset, strict) {
   }
 
   return Object.keys(subset).every(function (key) {
-    var originalProp = subset[key];
-    var subsetProp = original[key];
+    var originalProp = original[key];
+    var subsetProp = subset[key];
     if (typeof(originalProp) === 'object'
       && originalProp !== null
-      && subsetProp !== null) return isSubset(originalProp, subsetProp);
+      && subsetProp !== null) return isSubset(originalProp, subsetProp, strict);
     if (strict) return originalProp === subsetProp;
     return originalProp == subsetProp;
   });
