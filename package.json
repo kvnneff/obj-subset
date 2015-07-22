@@ -1,6 +1,6 @@
 {
   "name": "obj-subset",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Determine if one object is a subset of another object",
   "main": "index.js",
   "directories": {
