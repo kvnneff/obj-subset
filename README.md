@@ -10,10 +10,6 @@ npm:
 
     $ npm install obj-subset
 
-## Example
-
-Clone this repo and type `make example`
-
 ## API
 
 ### isSubset(original, subset, [strict])
