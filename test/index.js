@@ -4,6 +4,10 @@ var assert = require('assert');
 describe('subset(original, subset)', function () {
   var original;
   var subset;
+  it('returns false if the first argument is a subset', function () {
+    original = {foo: 'a'};
+    subset = {foo: 'a', bar: 'b'};
+  });
   it('returns true if `subset` is a subset of `original`', function () {
     original = {foo: 'a', bar: 'b'};
     subset = {foo: 'a'};
