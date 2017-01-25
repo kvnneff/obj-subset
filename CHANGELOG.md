@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.0] - 2017-01-25
+### Fixed
+- Argument order has been corrected.
+
+### Changed
+- Dropped support for component.
+
 ## [1.1.1] - 2015-07-22
 ### Fixed
 - Bug with nested objects where subset returned false if the entire nested object did not match.
