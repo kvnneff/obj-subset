@@ -22,7 +22,7 @@ function isSubset (original, subset, strict) {
     var originalArray = Array.prototype.slice.call(original);
     return subset.every(function (subsetItem) {
       return originalArray.some(function (originalItem) {
-        return isSubset(subsetItem, originalItem)
+        return isSubset(originalItem, subsetItem);
       });
     });
   }
