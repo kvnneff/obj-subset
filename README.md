@@ -1,4 +1,4 @@
-# obj-subset ![travis-ci](https://travis-ci.org/staygrimm/obj-subset.svg?branch=master)
+# obj-subset ![travis-ci](https://travis-ci.org/kvnneff/obj-subset.svg?branch=master)
 
 Determine if one object is a subset of another object in node and the browser.  Also works on arrays.
 
@@ -10,10 +10,6 @@ npm:
 
     $ npm install obj-subset
 
-component:
-
-    $ component install staygrimm/obj-subset
-    
 ## Example
 
 Clone this repo and type `make example`
@@ -53,7 +49,7 @@ Setting to `false` will allow lenient equality comparisons (== vs ===);
 
 The MIT License (MIT)
 
-Copyright (c) 2015 River Grimm <river.grimm@gmail.com>
+Copyright (c) 2017 Kevin Neff <kvnneff@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
